@@ -1,6 +1,6 @@
 {
   "name": "gnf_nft",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "GNFinder NFT Collection (original)",
   "main": "index.js",
   "scripts": {
