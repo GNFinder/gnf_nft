@@ -75,8 +75,7 @@ contract DigitalNoMadNFTV1 is ERC721URIStorage {
     /** 
     @audit randomMoneyWord() is never called by the contract so should be declared external.
     @note Use the external attribute.
-    */ 
-
+    */
   function randomMoneyWord(uint256 tokenId) public view returns (string memory) {
     uint256 rand = random(string(abi.encodePacked("FIRST_WORD", Strings.toString(tokenId))));
     // Squash the # between 0 and the length of the array to avoid going out of bounds.
