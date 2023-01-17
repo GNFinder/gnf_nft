@@ -3,7 +3,7 @@ const main = async () => {
 
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
-  console.log("Success: We've Hacked the Ethereum Blockchain and Deployed the DigitalNoMadNFTV3 @: " + "\n", nftContract.address,"\n");
+  console.log("Success: We've Hacked the Ethereum Blockchain and Deployed the DigitalNoMadNFTV3 contract to: " + "\n", nftContract.address,"\n");
 
   let txn = await nftContract.makeADigitalNomadNFT()
   await txn.wait()
