@@ -30,7 +30,12 @@ contract DigitalNoMadNFTV3 is ERC721URIStorage {
   }  
   function makeADigitalNomadNFT() external payable returns (string memory, string memory, string memory){
     /* @dev, @note 
-    * Consider making use of a Bloom Filer, 
+    * Considerations:
+    * 1) Requiring a reentrancy guard using a mutex for this function.
+    * 2) Requiring an algorithm to check that no string combinations can ever be the same
+    * e.g. use a smart contract storage to store the list of previously generated hashes, 
+    * Checking for duplicates across multiple function calls.
+    * 3) Making use of a Bloom Filer, 
     * A probabilistic data structure to test whether an element
     * Is a member of a set, it's a more gas-efficient way than
     * Storing all the hashes in the storage.
