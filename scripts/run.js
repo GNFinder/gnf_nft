@@ -1,16 +1,11 @@
 const main = async () => {
-  const nftContractFactory = await hre.ethers.getContractFactory('GNFOrignalNFT');
+  const nftContractFactory = await hre.ethers.getContractFactory('DigitalNoMadNFTV2');
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
-  console.log("Success: We've Hacked the Ethereum Blockchain and Deployed to: " + "\n", nftContract.address);
+  console.log("Success: We've Hacked the Ethereum Blockchain and Deployed the DigitalNoMadNFTV2 @: " + "\n", nftContract.address);
 
   // Calling the mint function on the GNFOrignalNFT contract.
-  let txn = await nftContract.makeAGNFNFT()
-  // Wait for it to be mined.
-  await txn.wait()
-
-  // Mint another NFT to double check.
-  txn = await nftContract.makeAGNFNFT()
+  let txn = await nftContract.makeADigitalNomadNFT()
   // Wait for it to be mined.
   await txn.wait()
 

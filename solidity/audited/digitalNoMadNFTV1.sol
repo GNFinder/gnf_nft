@@ -7,7 +7,7 @@
 pragma solidity 0.8.17;
 
 /** [UNLICENSED]
-    @title DigitalNoMadNFTV1 v1.0.0
+    @title DigitalNoMadNFTV (v1.0.0)
     @author Jamal Forbes (Senior Solidity Developer) <https://github.com/GNFinder>
     @notice Provides a function for MINTING the DigitalNoMadNFTV1. Provides a function for providing "randomness" in Solidity
     Something which is very complex as all information is stored publically and is deterministic (easy to predict).
@@ -18,10 +18,10 @@ pragma solidity 0.8.17;
 
 
 /// @note https://github.com/openzeppelin/ Documentation is the best way to keep up to date with the latest import libraries
-import "node_modules/@openzeppelin/contracts/utils/Counters.sol"; /// @audit - must add node_modules/@openzeppelin/ as absolute file path for HardHat to read withour errors - @note Remove after before production and after @audit
-import "node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol"; /// @audit - (node_modules) appended to front of relevant path as absolute path for HardHat to read withour errors.
-import "node_modules/@openzeppelin/contracts/utils/Strings.sol"; /// @audit - (node_modules) appended to front of relevant file path.
-import "node_modules/hardhat/console.sol";
+import "@openzeppelin/contracts/utils/Counters.sol"; /// @audit - must add node_modules/@openzeppelin/ as absolute file path for HardHat to read withour errors - @note Remove after before production and after @audit
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol"; /// @audit - (node_modules) appended to front of relevant path as absolute path for HardHat to read withour errors.
+import "@openzeppelin/contracts/utils/Strings.sol"; /// @audit - (node_modules) appended to front of relevant file path.
+import "hardhat/console.sol";
 /**
 @audit - Consider using an interface which will save a considerable amount of gas in storage. 
 Use only the functions called in the contract below, saving the amount

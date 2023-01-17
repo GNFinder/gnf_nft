@@ -1,8 +1,8 @@
 const main = async () => {
-    const nftContractFactory = await hre.ethers.getContractFactory('DigitalNoMadNFTV1');
+    const nftContractFactory = await hre.ethers.getContractFactory('DigitalNoMadNFTV2');
     const nftContract = await nftContractFactory.deploy();
     await nftContract.deployed();
-    console.log("Success: We've Hacked the Ethereum Blockchain and Deployed to: " + "\n", nftContract.address);
+    console.log("Success: We've Hacked the Ethereum Blockchain and Deployed DigitalNoMadNFTV2 to: " + "\n", nftContract.address);
   
     // Call the function.
     let txn = await nftContract.makeADigitalNomadNFT()
