@@ -20,7 +20,7 @@ Use only the functions called in the contract below, saving the amount
 Of gas used to store "ALL" the (unused) functions from imported contracts above, at compilation time.
  */
 contract DigitalNoMadNFTV2 is ERC721URIStorage {
-  /** @note DigitalNoMadNFTV1 is ERC721URIStorage not ERC721 as ERC721 _setTokenURI() was removed in pragma 0.8.0.
+  /** @note DigitalNoMadNFTV2 is ERC721URIStorage not ERC721 as ERC721 _setTokenURI() was removed in pragma 0.8.0.
       @notice NFT token is named: "DigitalNoMadNFT"
       @notice NFT token symbol is "DiNoMad"
   ***/ 
