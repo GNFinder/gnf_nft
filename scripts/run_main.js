@@ -7,11 +7,11 @@ const main = async () => {
 
   let txn = await nftContract.makeADigitalNomadNFT()
   await txn.wait()
-  // console.log("Here's NFT #A")
+  console.log("Here's NFT #A")
 
   txn = await nftContract.makeADigitalNomadNFT()
   await txn.wait()
-  // console.log("Here's NFT #B")
+  console.log("Here's NFT #B")
 };
 const runMain = async () => {
   try {

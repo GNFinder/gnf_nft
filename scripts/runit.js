@@ -1,21 +1,21 @@
 const main = async () => {
     const nftContractFactory = await hre.ethers.getContractFactory('DigitalNoMadNFTV5');
+  
     const nftContract = await nftContractFactory.deploy();
     await nftContract.deployed();
-    console.log("Success: We've Hacked the Ethereum Blockchain and Deployed DigitalNoMadNFTV5 to: " + "\n", nftContract.address);
+    console.log("Success: We've Hacked the Ethereum Blockchain and Deployed the DigitalNoMadNFTV5 contract to: " + "\n", nftContract.address,"\n");
   
-    // Call the function.
     let txn = await nftContract.makeADigitalNomadNFT()
-    // Wait for it to be mined.
     await txn.wait()
-    console.log("Minted DigitalNoMadNFT #1")
   
-    // txn = await nftContract.makeAGNFNFT()
-    // // Wait for it to be mined.
-    // await txn.wait()
-    // console.log("Minted NFT #2")
+    txn = await nftContract.makeADigitalNomadNFT()
+    await txn.wait()
+
+    await nftContract.getTotalNFTsMintedSoFar()
+    console.log("getTotalNFTsMintedSoFar: ");
+
+
   };
-  
   const runMain = async () => {
     try {
       await main();
@@ -25,5 +25,4 @@ const main = async () => {
       process.exit(1);
     }
   };
-  
   runMain();
